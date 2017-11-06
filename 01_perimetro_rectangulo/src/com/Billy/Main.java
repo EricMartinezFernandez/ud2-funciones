@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 public class Main {
 
 
-    public static double PerimetroRectangulo(double base, double altura) {
+    public static int PerimetroRectangulo(int base, int altura) {
 
-        double superficie = base * altura;
+        int superficie = (base * 2) + (altura * 2);
         return superficie;
 
     }
@@ -19,12 +19,12 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.print("Introduzca la base: ");
-        double base = Double.parseDouble(br.readLine());
+        int base = Integer.parseInt(br.readLine());
 
         System.out.print("Introduzca la base: ");
-        double altura = Double.parseDouble(br.readLine());
+        int altura = Integer.parseInt(br.readLine());
 
-        double superficie = PerimetroRectangulo(base, altura);
+        int superficie = PerimetroRectangulo(base, altura);
         System.out.print("La superficie es: ");
         System.out.println(superficie);
 
