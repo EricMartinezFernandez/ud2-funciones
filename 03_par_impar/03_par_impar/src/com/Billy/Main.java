@@ -6,30 +6,38 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-    public static void EsPar(int numero){
+    public static boolean EsPar(int numero) {
         int resto;
-        boolean ParImpar;
+        boolean ParImpar = true;
         resto = numero % 2;
-        if (resto == 0){
-            System.out.println("Es par");
+        if (resto == 0) {
+            ParImpar = true;
         }
+        return ParImpar;
     }
-    public static void EsImpar(int numero){
+
+    public static boolean EsImpar(int numero) {
         int resto;
-        boolean ParImpar;
+        boolean ParImpar = true;
         resto = numero % 2;
-        if (resto != 0){
-            System.out.println("Es impar");
+        if (resto != 0) {
+            ParImpar = false;
         }
+        return ParImpar;
     }
 
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        boolean resultado = true;
         System.out.print("Introduzca un numero: ");
         int numero = Integer.parseInt(br.readLine());
+        resultado = EsPar(numero);
+        resultado = EsImpar(numero);
 
-        EsPar(numero);
-        EsImpar(numero);
+        if (resultado == true) {
+            System.out.println("Es par");
+        } else {
+            System.out.println("Es impar");
+        }
     }
 }
