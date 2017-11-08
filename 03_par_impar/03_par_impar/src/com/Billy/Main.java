@@ -8,22 +8,22 @@ public class Main {
 
     public static boolean EsPar(int numero) {
         int resto;
-        boolean ParImpar = true;
+        boolean par = true;
         resto = numero % 2;
         if (resto == 0) {
-            ParImpar = true;
+            par = true;
         }
-        return ParImpar;
+        return par;
     }
 
     public static boolean EsImpar(int numero) {
         int resto;
-        boolean ParImpar = true;
+        boolean impar = true;
         resto = numero % 2;
         if (resto != 0) {
-            ParImpar = false;
+            impar = false;
         }
-        return ParImpar;
+        return impar;
     }
 
     public static void main(String[] args) throws IOException {
