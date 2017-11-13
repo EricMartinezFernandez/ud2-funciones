@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class Main {
 
     public static double convertirTemperatura(double centigrados) {
-        double respuesta = centigrados * 33.8;
+        double respuesta = (centigrados * 1.8) + 32;
         return respuesta;
     }
 
