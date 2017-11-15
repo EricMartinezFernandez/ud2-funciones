@@ -38,6 +38,8 @@ public class Main {
 
             if (operacion == 'd') {
                 System.out.println("Fin del programa");
+            } else if (operacion != 'a' || operacion != 'b' || operacion != 'c') {
+                System.out.println("El caracter introducido no es válido");
             } else {
                 System.out.print("Introduzca un radio: ");
                 numero = Double.parseDouble(br.readLine());
@@ -74,7 +76,6 @@ public class Main {
 
                 default:
                     bucle = false;
-                    System.out.println("El caracter introducido no es válido");
                     System.out.println("-----------------------");
 
             }
